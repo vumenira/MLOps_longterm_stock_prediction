@@ -1,0 +1,25 @@
+[project]
+name = "mlops-longterm-stock-prediction"
+version = "0.1.0"
+description = "6-month stock excess-return quantile forecasting, built as a course MLOps project"
+readme = "README.md"
+authors = [
+    { name = "vumenira", email = "bodkapavuchok@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "pandas>=3.0.6",
+]
+
+[project.scripts]
+mlops-longterm-stock-prediction = "mlops_longterm_stock_prediction:main"
+
+[build-system]
+requires = ["uv_build>=0.12.22,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.7.0",
+    "ruff>=0.17.1",
+]
